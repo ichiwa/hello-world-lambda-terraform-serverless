@@ -1,0 +1,31 @@
+{
+  "name": "lambda-terraform-serverless",
+  "version": "1.0.0",
+  "description": "simple lambda & serverless & terraform",
+  "main": "./src/index.js",
+  "scripts": {
+    "package": "cd src; npx serverless package --stage production",
+    "deploy": "cd src; terraform apply",
+    "start": "cd src; npx serverless offline start --stage development",
+    "lint": "eslint --fix ./src/**/*.js"
+  },
+  "dependencies": {
+    "serverless": "^1.38.0"
+  },
+  "engines": {
+    "node": "8.10"
+  },
+  "devDependencies": {
+    "eslint": "^5.15.1",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "power-assert": "^1.6.1",
+    "prettier": "^1.16.4",
+    "serverless-offline": "^4.8.1"
+  }
+}
